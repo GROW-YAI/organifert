@@ -440,18 +440,16 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black opacity-10"></div>
 
       {/* Main Content */}
-      <div className="relative z-10 text-white px-6 py-20 max-w-5xl mx-auto">
+      <div className="relative z-10 text-white px-6 py-20 max-w-4xl mx-auto">
         <div className="flex flex-col items-start justify-center bg-blue-500 bg-opacity-80 p-6 rounded-lg md:flex-row md:justify-between md:p-10">
-          <div className="md:max-w-lg">
-            <h1 className="text-2xl font-bold mb-4 md:text-4xl">
-              {heroHeader}
-            </h1>
-            <p className="text-sm mb-6 md:text-lg">{heroText}</p>
+          <div className="md:max-w-3xl">
+            <h1 className="text-2xl font-bold m-1 md:text-4xl">{heroHeader}</h1>
+            <p className="text-sm mb-3 md:text-lg">{heroText}</p>
           </div>
         </div>
 
         {/* Navigation Tabs */}
-        <div className="bg-white shadow-md mb-4 md:mt-0 rounded-lg">
+        <div className="bg-white shadow-md mb-1 md:mt-40 rounded-lg">
           <div className="flex flex-wrap justify-center py-4">
             {links.map((link, index) => (
               <Link

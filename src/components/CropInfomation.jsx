@@ -379,7 +379,7 @@ const CropInformation = ({ showBreadCrumb = true }) => {
       <MainContent>
         {/* Dynamic Breadcrumb */}
         {showBreadCrumb && (
-          <div className="bg-gray-100 py-3 shadow-sm mt-1">
+          <div className="bg-gray-100 py-3 shadow-sm mt-2">
             <Breadcrumb />
           </div>
         )}
