@@ -28,6 +28,7 @@ const App = () => {
         <Route path="/toolbox" element={<FarmerToolBox />} />
         <Route path="/crop/:id" element={<CropDetails />} />
       </Routes>
+
       <Footer />
     </Router>
   );
