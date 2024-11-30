@@ -270,7 +270,7 @@ const HeroSection = () => {
         setBgImage("./src/assets/cropinfo.png"); // Default background image
         setHeroHeader("Crop nutrition solutions");
         setHeroText(
-          "Increase the quality and yield of your crops. Yara agronomists are here to help with advice on all aspects of crop nutrition."
+          "Increase the quality and yield of your crops. OrganiFert agronomists are here to help with advice on all aspects of crop nutrition."
         );
         break;
     }

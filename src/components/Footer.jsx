@@ -4,9 +4,9 @@ const Footer = () => {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
         {/* Contact Section */}
         <div>
-          <h3 className="text-lg font-bold mb-4">Contact OrganiFert</h3>
+          <h3 className="text-lg font-bold mb-4">Contact Evans Okyere Farms</h3>
           <ul className="space-y-2 text-sm text-gray-300">
-            <li>OrganiFert </li>
+            <li>Evans Okyere Farms</li>
             <li>No.2 Borteist Avenue</li>
             <li>Roman Ridge, Accra, Ghana</li>
             <li>
@@ -20,10 +20,10 @@ const Footer = () => {
             </li>
             <li>
               <a
-                href="mailto:kwame.okyere@organifert.com"
+                href="mailto:evans.okyere@evansokyerefarms.com"
                 className="text-white hover:underline"
               >
-                evans.farmer@organifert.com
+                evans.okyere@evansokyerefarms.com
               </a>
             </li>
           </ul>
@@ -31,7 +31,7 @@ const Footer = () => {
 
         {/* Navigation Section */}
         <div>
-          <h3 className="text-lg font-bold mb-4">About OrganiFert</h3>
+          <h3 className="text-lg font-bold mb-4">About Evans Okyere Farms</h3>
           <ul className="space-y-2 text-sm text-gray-300">
             <li>
               <a href="#" className="hover:underline">
@@ -53,7 +53,7 @@ const Footer = () => {
 
         {/* Social Media Section */}
         <div>
-          <h3 className="text-lg font-bold mb-4">Follow OrganiFert</h3>
+          <h3 className="text-lg font-bold mb-4">Follow Evans Okyere Farms</h3>
           <p className="text-sm text-gray-300 mb-4">
             Stay connected with us through social media.
           </p>
@@ -92,7 +92,7 @@ const Footer = () => {
             </a>
           </div>
           <p className="text-sm text-gray-400 mt-4 md:mt-0">
-            © 2024 OrganiFert. All rights reserved.
+            © 2024 Evans Okyere Farms. All rights reserved.
           </p>
         </div>
       </div>

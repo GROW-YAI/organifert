@@ -374,7 +374,7 @@ const FarmerToolBox = ({ showBreadCrumb = true }) => {
       image: ChectIt,
       title: "CheckIT - to identify nutrient deficiencies",
       description:
-        "Yara CheckIT is an agricultural mobile device app that gives farmers a simple and fast identification of possible nutrient deficiencies.",
+        "EvansOkyereFarms CheckIT is an agricultural mobile device app that gives farmers a simple and fast identification of possible nutrient deficiencies.",
     },
     {
       id: "imageit",
@@ -402,7 +402,7 @@ const FarmerToolBox = ({ showBreadCrumb = true }) => {
       image: Megalab,
       title: "Megalab™",
       description:
-        "Yara Megalab™ is an Internet-based, secure system offering interpretation and biometric data services from agricultural analysis.",
+        "EvansOkyereFarms Megalab™ is an Internet-based, secure system offering interpretation and biometric data services from agricultural analysis.",
     },
   ];
 
