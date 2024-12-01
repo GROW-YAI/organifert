@@ -246,23 +246,25 @@
 //         </div>
 
 // {/* Navigation Tabs */}
-// <div className="bg-white shadow-md mb-1 md:mt-32 rounded-sm">
-//   <div className="flex flex-wrap justify-center pb-4">
-//     {links.map((link, index) => (
-//       <Link
-//         key={index}
-//         className={`px-4 py-2 text-sm border-b-2 ${
-//           pathname === link.path
-//             ? "border-b-blue-800 text-blue-600"
-//             : "border-b-transparent text-blue-900"
-//         } hover:bg-gray-100 md:px-6 md:py-3`}
-//         to={link.path}
-//       >
-//         {link.name}
-//       </Link>
-//     ))}
-//   </div>
-// </div>
+{
+  /* <div className="bg-white shadow-md mb-1 md:mt-32 rounded-sm">
+  <div className="flex flex-wrap justify-center pb-4">
+    {links.map((link, index) => (
+      <Link
+        key={index}
+        className={`px-4 py-2 text-sm border-b-2 ${
+          pathname === link.path
+            ? "border-b-blue-800 text-blue-600"
+            : "border-b-transparent text-blue-900"
+        } hover:bg-gray-100 md:px-6 md:py-3`}
+        to={link.path}
+      >
+        {link.name}
+      </Link>
+    ))}
+  </div>
+</div> */
+}
 //       </div>
 //     </section>
 //   );
@@ -622,7 +624,7 @@ const Navbar = () => {
           </li>
           <li>
             <a
-              href="/about"
+              href="#about"
               onClick={() => setIsMenuOpen(false)}
               className="block text-sm md:text-lg hover:underline"
             >
@@ -688,6 +690,13 @@ const HeroSection = () => {
           "Information about the safe use of fertilisers and best practice advice to people working with fertilisers in the supply chain and as end users."
         );
         break;
+      case "/about":
+        setBgImage(Hero);
+        setHeroHeader("Welcome to OrganiFert");
+        setHeroText(
+          "OrganiFert Ghana was established in 2024 to strengthen the quality and depth of input supply and related services along agricultural value chains to increase the productivity of Ghanaian farmers."
+        );
+        break;
       default:
         setBgImage(Hero);
         setHeroHeader("Crop nutrition solutions");
@@ -706,8 +715,8 @@ const HeroSection = () => {
       }}
     >
       <Navbar />
-      <div className="relative z-10 text-white px-6 py-20 max-w-4xl mx-auto">
-        <div className="relative flex flex-col items-start justify-center bg-blue-500 bg-opacity-80 p-6 rounded-sm md:flex-row md:justify-between md:p-10 mt-12 md:mt-40 max-w-max mx-auto">
+      <div className="relative z-10 text-white px-6 py-20 max-w-5xl mx-auto">
+        <div className="relative flex flex-col items-start justify-center bg-blue-500 bg-opacity-80 p-6 rounded-sm md:flex-row md:justify-between md:p-10 mx-auto m-40 md:mt-44 w-full max-w-3xl">
           {/* Hero Header and Text */}
           <div className="md:max-w-3xl">
             <h1 className="text-2xl font-bold m-1 md:text-4xl">{heroHeader}</h1>
@@ -735,6 +744,23 @@ const HeroSection = () => {
               />
             </svg>
           </button>
+        </div>
+        <div className="bg-white shadow-md mb-64 md:-scroll-mt-3.5 rounded-sm hidden md:block">
+          <div className="flex flex-wrap justify-center pb-1">
+            {links.map((link, index) => (
+              <Link
+                key={index}
+                className={`px-4 py-1 text-lg border-b-2 ${
+                  pathname === link.path
+                    ? "border-b-blue-800 text-blue-600"
+                    : "border-b-transparent text-blue-900"
+                } hover:bg-gray-100 md:px-6 md:py-3`}
+                to={link.path}
+              >
+                {link.name}
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
 
