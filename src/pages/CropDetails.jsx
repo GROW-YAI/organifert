@@ -38,7 +38,7 @@ const CropDetails = () => {
   }
 
   return (
-    <div className="container mx-auto p-6">
+    <div className="container mx-auto p-10">
       <h1 className="text-2xl font-bold text-blue-700">{crop.name}</h1>
       <p className="mt-4 text-gray-700">{crop.details}</p>
     </div>

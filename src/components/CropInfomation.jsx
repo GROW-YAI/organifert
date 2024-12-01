@@ -336,6 +336,7 @@ const CropCard = styled(Link)`
   background-color: #f9f9f9;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   text-decoration: none;
+  position: relative; /* Required for the gradient overlay */
 
   &:hover {
     transform: translateY(-5px);
@@ -379,7 +380,7 @@ const CropInformation = ({ showBreadCrumb = true }) => {
       <MainContent>
         {/* Dynamic Breadcrumb */}
         {showBreadCrumb && (
-          <div className="bg-gray-100 py-3 shadow-sm mt-2">
+          <div className="bg-gray-100 p-1 shadow-sm  mt-6">
             <Breadcrumb />
           </div>
         )}

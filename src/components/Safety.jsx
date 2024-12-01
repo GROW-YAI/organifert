@@ -182,7 +182,7 @@ const Safety = ({ showBreadCrumb = true }) => {
       {showBreadCrumb && (
         <nav
           aria-label="Breadcrumb"
-          className="bg-gray-100 py-3 shadow-sm mt-10"
+          className="bg-gray-100 py-2 shadow-sm mt-8"
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ol className="flex items-center space-x-2 text-gray-500 text-sm">
@@ -228,7 +228,7 @@ const Safety = ({ showBreadCrumb = true }) => {
       {/* Hero Section */}
       <header className="bg-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-start">
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl text-blue-900 font-bold mb-4">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl text-blue-900 font-bold mb-6">
             Fertiliser Handling and Safety
           </h1>
           <p className="text-base sm:text-lg lg:text-xl font-light leading-relaxed">

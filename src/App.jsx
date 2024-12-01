@@ -11,6 +11,7 @@ import CropInfomation from "./components/CropInfomation";
 import Safety from "./components/Safety";
 import FarmerToolBox from "./components/FarmerToolBox";
 import CropDetails from "./pages/CropDetails";
+import AboutUs from "./components/AboutUs";
 
 const App = () => {
   return (
@@ -19,7 +20,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutPage />} />
-        {/* <Route path="/products" element={<ProductsPage />} /> */}
+        <Route path="/about" element={<AboutUs />} />
         {/* <Route path="/contact" element={<ContactPage />} /> */}
         <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/fertilisers" element={<ProductSection />} />

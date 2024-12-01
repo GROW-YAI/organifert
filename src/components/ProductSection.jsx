@@ -187,12 +187,12 @@ const Breadcrumb = styled.a`
 // Responsive Product Section Component
 const ProductSection = ({ showBreadCrumb = true }) => {
   return (
-    <Container className="mt-0">
-      <MainContent>
+    <Container className="mt-0 max-w-full mx-auto">
+      <MainContent max-w-full mx-auto>
         {/* Breadcrumb */}
         {showBreadCrumb && (
-          <BreadcrumbContainer className="bg-gray-100 py-3 shadow-sm">
-            <Breadcrumb href="/">Home</Breadcrumb>
+          <BreadcrumbContainer className="bg-gray-100 py-2 shadow-sm">
+            <Breadcrumb href="#">Home</Breadcrumb>
             {/* <Breadcrumb href="#">Crop nutrition</Breadcrumb> */}
             <Breadcrumb>Fertilisers</Breadcrumb>
           </BreadcrumbContainer>

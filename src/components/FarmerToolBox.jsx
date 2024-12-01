@@ -407,12 +407,12 @@ const FarmerToolBox = ({ showBreadCrumb = true }) => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-full mx-auto">
       {/* Breadcrumb Navigation */}
       {showBreadCrumb && (
         <nav
           aria-label="Breadcrumb"
-          className="bg-gray-100 py-3 shadow-sm mt-10"
+          className="bg-gray-100 py-2 shadow-sm mt-16"
         >
           <div className="max-w-7xl mx-auto px-6">
             <ol className="flex items-center space-x-2 text-gray-500 text-sm">
@@ -456,7 +456,7 @@ const FarmerToolBox = ({ showBreadCrumb = true }) => {
       )}
 
       {/* Title and Description */}
-      <div className="px-6 py-12">
+      <div className="px-6 py-12 max-w-7xl mx-auto">
         <h2 className="text-2xl md:text-3xl text-[#1E4A98] font-bold mb-4">
           Make better-informed nutrient decisions
         </h2>
@@ -471,7 +471,7 @@ const FarmerToolBox = ({ showBreadCrumb = true }) => {
       </div>
 
       {/* Tools Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-6 max-w-7xl mx-auto mb-14">
         {tools.map((tool) => (
           <div
             key={tool.id}
