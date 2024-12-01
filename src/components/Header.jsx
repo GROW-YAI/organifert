@@ -716,7 +716,7 @@ const HeroSection = () => {
     >
       <Navbar />
       <div className="relative z-10 text-white px-6 py-20 max-w-5xl mx-auto">
-        <div className="relative flex flex-col items-start justify-center bg-blue-500 bg-opacity-80 p-6 rounded-sm md:flex-row md:justify-between md:p-10 mx-auto m-40 md:mt-44 w-full max-w-3xl">
+        <div className="relative flex flex-col items-start justify-center bg-blue-500 bg-opacity-80 px-9 rounded-lg md:flex-row md:justify-between md:p-10 mx-auto m-40 md:mt-44 w-full max-w-3xl">
           {/* Hero Header and Text */}
           <div className="md:max-w-3xl">
             <h1 className="text-2xl font-bold m-1 md:text-4xl">{heroHeader}</h1>
@@ -726,7 +726,7 @@ const HeroSection = () => {
           {/* Bottom-right Menu Icon */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="absolute bottom-4 right-4 md:hidden p-2"
+            className="absolute bottom-4 right-4 md:hidden p-0"
             aria-label="Toggle Menu"
           >
             <svg
