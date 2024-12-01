@@ -707,7 +707,7 @@ const HeroSection = () => {
     >
       <Navbar />
       <div className="relative z-10 text-white px-6 py-20 max-w-4xl mx-auto">
-        <div className="flex flex-col items-start justify-center bg-blue-500 bg-opacity-80 p-6 rounded-lg md:flex-row md:justify-between md:p-10 relative">
+        <div className="relative flex flex-col items-start justify-center bg-blue-500 bg-opacity-80 p-6 rounded-sm md:flex-row md:justify-between md:p-10 mt-12 md:mt-40 max-w-max mx-auto">
           {/* Hero Header and Text */}
           <div className="md:max-w-3xl">
             <h1 className="text-2xl font-bold m-1 md:text-4xl">{heroHeader}</h1>
