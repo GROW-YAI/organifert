@@ -624,7 +624,7 @@ const Navbar = () => {
           </li>
           <li>
             <a
-              href="#about"
+              href="/about"
               onClick={() => setIsMenuOpen(false)}
               className="block text-sm md:text-lg hover:underline"
             >
