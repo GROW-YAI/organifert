@@ -569,7 +569,7 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a href="/about" className="hover:underline text-xl md:text-lg">
+            <a href="/about-us" className="hover:underline text-xl md:text-lg">
               About Us
             </a>
           </li>
@@ -624,7 +624,7 @@ const Navbar = () => {
           </li>
           <li>
             <a
-              href="/about"
+              href="/about-us"
               onClick={() => setIsMenuOpen(false)}
               className="block text-sm md:text-lg hover:underline"
             >
@@ -632,7 +632,7 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <button
+            {/* <button
               onClick={() => {
                 setIsMenuOpen(false);
                 document
@@ -643,7 +643,7 @@ const Navbar = () => {
               aria-label="Search"
             >
               🔍
-            </button>
+            </button> */}
           </li>
         </ul>
       )}
@@ -690,7 +690,7 @@ const HeroSection = () => {
           "Information about the safe use of fertilisers and best practice advice to people working with fertilisers in the supply chain and as end users."
         );
         break;
-      case "/about":
+      case "/about-us":
         setBgImage(Hero);
         setHeroHeader("Welcome to OrganiFert");
         setHeroText(
