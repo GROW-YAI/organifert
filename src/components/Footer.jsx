@@ -1,8 +1,3 @@
-// import LinkedIn from "../assets/icons/icons8-linkedin-48.png"
-// import Instagram from "../assets/icons/icons8-instagram-48.png"
-// import Facebook from "../assets/icons/icons8-facebook-48.png"
-// import TwitterX from "../assets/icons/icons8-twitterx-48.png"
-
 import {
   FaLinkedin,
   FaFacebook,
