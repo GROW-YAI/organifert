@@ -4,11 +4,11 @@ import Hero from "../assets/hero.png";
 import CropInfo from "../assets/cropinfo.png";
 import Safety from "../assets/bg-safety.png";
 import FarmerToolbox from "../assets/farmertoolbox.png";
-import Logo from "../assets/logo/evans-okyere-farms-high-resolution-logo.png";
+import Logo from "../assets/logo/high-resolution-logo.png";
 // Links for navigation tabs
 const links = [
   { name: "Crop Information", path: "/crop-info" },
-  { name: "Fertilizers", path: "/fertilisers" },
+  { name: "Fertilisers", path: "/fertilisers" },
   { name: "Farmer's toolbox", path: "/toolbox" },
   { name: "Fertiliser handling and safety", path: "/safety" },
 ];
@@ -17,16 +17,20 @@ const links = [
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const closeMenu = () => setIsMenuOpen(false);
+
   return (
     <nav className="absolute top-0 left-0 w-full bg-transparent z-20">
       <div className="max-w-8xl mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
-        <div>
-          <img
-            src={Logo} // Replace with your actual logo path
-            alt="Evans Okyere Farms Logo"
-            className="h-16 w-auto md:h-32" // Responsive height and auto width
-          />
+        <div className="flex items-center justify-start">
+          <Link to="/" className="inline-block">
+            <img
+              src={Logo} // Replace with your actual logo path
+              alt="Evans Okyere Farms Logo"
+              className="h-16 w-80 md:h-36 -mx-11 p-1 rounded-md" // Responsive height and auto width
+            />
+          </Link>
         </div>
 
         {/* Desktop Links */}
@@ -78,42 +82,51 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Links */}
+      {/* Mobile Menu with Backdrop */}
       {isMenuOpen && (
-        <ul className="flex flex-col bg-black bg-opacity-80 text-white space-y-6 px-10 py-10 md:hidden">
-          <li>
-            <a
-              href="/"
-              onClick={() => setIsMenuOpen(false)} // Close menu on navigation
-              className="block text-lg md:text-lg hover:underline"
-            >
-              Crop Nutrition Solution
-            </a>
-          </li>
-          <li>
-            <a
-              href="/about-us"
-              onClick={() => setIsMenuOpen(false)}
-              className="block text-lg md:text-lg hover:underline"
-            >
-              About Us
-            </a>
-          </li>
-          {/* <li> */}
-          {/* <button
-              onClick={() => {
-                setIsMenuOpen(false);
-                document
-                  .getElementById("search")
-                  .scrollIntoView({ behavior: "smooth" });
-              }}
-              className="p-2 border rounded-full text-white hover:bg-white hover:text-blue-500 transition"
-              aria-label="Search"
-            >
-              🔍
-            </button> */}
-          {/* </li> */}
-        </ul>
+        <>
+          {/* Backdrop */}
+          <div
+            className="fixed inset-0 bg-black bg-opacity-50 z-10"
+            onClick={closeMenu}
+          ></div>
+
+          {/* Menu */}
+          <ul className="flex flex-col bg-black bg-opacity-80 text-white space-y-6 px-10 py-10 md:hidden z-20 relative">
+            <li>
+              <a
+                href="/"
+                onClick={closeMenu} // Close menu on navigation
+                className="block text-lg md:text-lg hover:underline"
+              >
+                Crop Nutrition Solution
+              </a>
+            </li>
+            <li>
+              <a
+                href="/about-us"
+                onClick={closeMenu}
+                className="block text-lg md:text-lg hover:underline"
+              >
+                About Us
+              </a>
+            </li>
+            <li>
+              <button
+                onClick={() => {
+                  closeMenu();
+                  document
+                    .getElementById("search")
+                    .scrollIntoView({ behavior: "smooth" });
+                }}
+                className="p-2 border rounded-full text-white hover:bg-white hover:text-blue-500 transition"
+                aria-label="Search"
+              >
+                🔍
+              </button>
+            </li>
+          </ul>
+        </>
       )}
     </nav>
   );
