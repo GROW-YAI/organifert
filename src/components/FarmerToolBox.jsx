@@ -342,7 +342,7 @@ const FarmerToolBox = ({ showBreadCrumb = true }) => {
   const getBreadcrumbItems = () => {
     const pathnames = location.pathname.split("/").filter((x) => x);
     return [
-      { label: "Home", path: "#" }, // Always show "Home"
+      { label: "Home", path: "/" }, // Always show "Home"
       // { label: "Crop Nutrition", path: "/" },
       ...pathnames.map((_, index) => {
         const href = `/${pathnames.slice(0, index + 1).join("/")}`;
@@ -437,13 +437,13 @@ const FarmerToolBox = ({ showBreadCrumb = true }) => {
                   <li>
                     {index === breadcrumbItems.length - 1 ? (
                       <span
-                        className="text-blue-900 font-semibold"
+                        className="text-red-900 font-semibold"
                         aria-current="page"
                       >
                         {item.label}
                       </span>
                     ) : (
-                      <Link to={item.href} className="hover:text-blue-700">
+                      <Link to={item.href} className="hover:text-red-700">
                         {item.label}
                       </Link>
                     )}
@@ -457,7 +457,7 @@ const FarmerToolBox = ({ showBreadCrumb = true }) => {
 
       {/* Title and Description */}
       <div className="px-6 py-12 max-w-7xl mx-auto">
-        <h2 className="text-2xl md:text-3xl text-[#1E4A98] font-bold mb-4">
+        <h2 className="text-2xl md:text-3xl text-[#b80000] font-bold mb-4">
           Make better-informed nutrient decisions
         </h2>
         <p className="text-sm md:text-base text-gray-600 mb-8">
@@ -484,7 +484,7 @@ const FarmerToolBox = ({ showBreadCrumb = true }) => {
               className="w-full h-48 object-cover"
             />
             <div className="p-4">
-              <h3 className="text-lg font-medium text-[#1E4A98] mb-2">
+              <h3 className="text-lg font-medium text-[#b80000] mb-2">
                 {tool.title}
               </h3>
               <p className="text-gray-700 text-sm">{tool.description}</p>

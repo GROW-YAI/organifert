@@ -207,13 +207,13 @@ const Safety = ({ showBreadCrumb = true }) => {
                   <li>
                     {index === breadcrumbItems.length - 1 ? (
                       <span
-                        className="text-blue-900 font-semibold"
+                        className="text-red-900 font-semibold"
                         aria-current="page"
                       >
                         {item.label}
                       </span>
                     ) : (
-                      <Link to={item.path} className="hover:text-blue-700">
+                      <Link to={item.path} className="hover:text-red-700">
                         {item.label}
                       </Link>
                     )}
@@ -228,7 +228,7 @@ const Safety = ({ showBreadCrumb = true }) => {
       {/* Hero Section */}
       <header className="bg-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-start">
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl text-blue-900 font-bold mb-6">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl text-red-900 font-bold mb-6">
             Fertiliser Handling and Safety
           </h1>
           <p className="text-base sm:text-lg lg:text-xl font-light leading-relaxed">
@@ -251,7 +251,7 @@ const Safety = ({ showBreadCrumb = true }) => {
                 className="h-16 w-16 mx-auto"
               />
             </div>
-            <h2 className="text-xl font-semibold text-blue-900 mb-2">
+            <h2 className="text-xl font-semibold text-red-900 mb-2">
               Employee Safety
             </h2>
             <p className="text-gray-600">
@@ -269,7 +269,7 @@ const Safety = ({ showBreadCrumb = true }) => {
                 className="h-16 w-16 mx-auto"
               />
             </div>
-            <h2 className="text-xl font-semibold text-blue-900 mb-2">
+            <h2 className="text-xl font-semibold text-red-900 mb-2">
               Customer Safety
             </h2>
             <p className="text-gray-600">
@@ -287,7 +287,7 @@ const Safety = ({ showBreadCrumb = true }) => {
                 className="h-16 w-16 mx-auto"
               />
             </div>
-            <h2 className="text-xl font-semibold text-blue-900 mb-2">
+            <h2 className="text-xl font-semibold text-red-900 mb-2">
               Environmental Safety
             </h2>
             <p className="text-gray-600">

@@ -1,3 +1,18 @@
+// import LinkedIn from "../assets/icons/icons8-linkedin-48.png"
+// import Instagram from "../assets/icons/icons8-instagram-48.png"
+// import Facebook from "../assets/icons/icons8-facebook-48.png"
+// import TwitterX from "../assets/icons/icons8-twitterx-48.png"
+
+import {
+  FaLinkedin,
+  FaFacebook,
+  FaInstagram,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
+
 const Footer = () => {
   return (
     <footer className="bg-[#0B1C3E] text-white py-12">
@@ -5,20 +20,28 @@ const Footer = () => {
         {/* Contact Section */}
         <div>
           <h3 className="text-lg font-bold mb-4">Contact Evans Okyere Farms</h3>
-          <ul className="space-y-2 text-sm text-gray-300">
-            <li>Evans Okyere Farms</li>
-            <li>No.2 Borteist Avenue</li>
-            <li>Roman Ridge, Accra, Ghana</li>
-            <li>
+          <ul className="space-y-4 text-sm text-gray-300">
+            <li className="flex items-start">
+              <FaMapMarkerAlt className="text-white mr-2 mt-1" />
+              <div>
+                Evans Okyere Farms <br />
+                Ramseyer Technical Institute/Presby Senior High School <br />
+                Atonsu-Chirapatre, opposite Wood Pillar Ltd <br />
+                Kumasi, Ghana
+              </div>
+            </li>
+            <li className="flex items-center">
+              <FaPhoneAlt className="text-white mr-2" />
               Tel:{" "}
               <a
-                href="tel:+233010101712"
-                className="text-white hover:underline"
+                href="tel:+2330542733102"
+                className="text-white hover:underline ml-1"
               >
-                +233 0 101 101 712
+                +2330542733102
               </a>
             </li>
-            <li>
+            <li className="flex items-center">
+              <FaEnvelope className="text-white mr-2" />
               <a
                 href="mailto:evans.okyere@evansokyerefarms.com"
                 className="text-white hover:underline"
@@ -34,12 +57,12 @@ const Footer = () => {
           <h3 className="text-lg font-bold mb-4">About Evans Okyere Farms</h3>
           <ul className="space-y-2 text-sm text-gray-300">
             <li>
-              <a href="#" className="hover:underline">
+              <a href="/about-us" className="hover:underline">
                 Our Story
               </a>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <a href="/fertilisers" className="hover:underline">
                 Products & Services
               </a>
             </li>
@@ -57,18 +80,38 @@ const Footer = () => {
           <p className="text-sm text-gray-300 mb-4">
             Stay connected with us through social media.
           </p>
-          <div className="flex space-x-4">
-            <a href="#" className="text-gray-400 hover:text-white">
-              <i className="fab fa-linkedin fa-lg"></i>
+          <div className="flex space-x-4 text-2xl">
+            <a
+              href="https://www.linkedin.com/in/evans-okyere-farms"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-white"
+            >
+              <FaLinkedin className="fa-lg" />
             </a>
-            <a href="#" className="text-gray-400 hover:text-white">
-              <i className="fab fa-facebook fa-lg"></i>
+            <a
+              href="https://www.facebook.com/evansokyerefarms"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-white"
+            >
+              <FaFacebook className="fa-lg" />
             </a>
-            <a href="#" className="text-gray-400 hover:text-white">
-              <i className="fab fa-twitter fa-lg"></i>
+            <a
+              href="https://twitter.com/evansokyerefarms"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-white"
+            >
+              <FaSquareXTwitter className="fa-lg" />
             </a>
-            <a href="#" className="text-gray-400 hover:text-white">
-              <i className="fab fa-instagram fa-lg"></i>
+            <a
+              href="https://www.instagram.com/evansokyerefarms"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-white"
+            >
+              <FaInstagram className="fa-lg" />
             </a>
           </div>
         </div>

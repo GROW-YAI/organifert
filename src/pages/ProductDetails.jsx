@@ -47,15 +47,15 @@ const ProductDetails = () => {
       <div className="container mx-auto px-4">
         {/* Breadcrumb */}
         <nav className="text-sm text-gray-500 mb-6">
-          <a href="/" className="text-blue-600 hover:underline">
+          <a href="/" className="text-red-600 hover:underline">
             Home
           </a>{" "}
           &gt;{" "}
-          <a href="/crop-nutrition" className="text-blue-600 hover:underline">
+          <a href="/crop-nutrition" className="text-red-600 hover:underline">
             Crop nutrition
           </a>{" "}
           &gt;{" "}
-          <a href="/fertilisers" className="text-blue-600 hover:underline">
+          <a href="/fertilisers" className="text-red-600 hover:underline">
             Fertilisers
           </a>{" "}
           &gt; <span className="text-gray-900">{product.name}</span>
@@ -91,7 +91,7 @@ const ProductDetails = () => {
                 key={nutrient.symbol}
                 className="bg-white text-center p-4 shadow-md rounded-sm"
               >
-                <div className="text-2xl font-bold text-blue-600">
+                <div className="text-2xl font-bold text-red-600">
                   {nutrient.symbol}
                 </div>
                 <div className="text-gray-600 text-sm">{nutrient.name}</div>
@@ -117,7 +117,7 @@ const ProductDetails = () => {
                   className="w-full h-48 object-contain bg-gray-100 p-4"
                 />
                 <div className="p-4">
-                  <h3 className="text-lg font-semibold text-blue-600 mb-2">
+                  <h3 className="text-lg font-semibold text-red-600 mb-2">
                     {related.name}
                   </h3>
                   <p className="text-gray-600 text-sm">{related.description}</p>

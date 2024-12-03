@@ -8,7 +8,7 @@ const BreadcrumbContainer = styled.div`
 `;
 
 const BreadcrumbLink = styled(Link)`
-  color: #1e4a98;
+  color: #b80000;
   text-decoration: none;
 
   &:not(:last-child)::after {

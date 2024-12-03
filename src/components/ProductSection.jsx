@@ -174,7 +174,7 @@ const BreadcrumbContainer = styled.div`
   margin-bottom: 20px;
 `;
 const Breadcrumb = styled.a`
-  color: #1e4a98;
+  color: #b80000;
   text-decoration: none;
   font-size: 14px;
 
@@ -199,7 +199,7 @@ const ProductSection = ({ showBreadCrumb = true }) => {
         )}
 
         {/* Section Title */}
-        <h1 className="text-[#1E4A98] text-2xl md:text-3xl font-bold mb-4">
+        <h1 className="text-[#B80000] text-2xl md:text-3xl font-bold mb-4">
           How to choose the right fertiliser
         </h1>
         <p className="text-gray-700 text-sm md:text-base mb-6">
@@ -225,7 +225,7 @@ const ProductSection = ({ showBreadCrumb = true }) => {
 
               {/* Product Content */}
               <div className="p-4 sm:p-6 w-full">
-                <h3 className="text-lg font-semibold text-[#1E4A98] mb-2">
+                <h3 className="text-lg font-semibold text-[#B80000] mb-2">
                   {product.title}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
