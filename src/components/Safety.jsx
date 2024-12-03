@@ -161,7 +161,7 @@ const Safety = ({ showBreadCrumb = true }) => {
     const pathnames = location.pathname.split("/").filter((x) => x);
     return [
       { label: "Home", path: "/" }, // Always show "Home"
-      // { label: "Crop Nutrition", path: "/" },
+      { label: "Crop Nutrition", path: "/" },
       ...pathnames.map((_, index) => {
         const href = `/${pathnames.slice(0, index + 1).join("/")}`;
         const label = href
@@ -180,10 +180,7 @@ const Safety = ({ showBreadCrumb = true }) => {
     <div>
       {/* Breadcrumb Navigation */}
       {showBreadCrumb && (
-        <nav
-          aria-label="Breadcrumb"
-          className="bg-gray-100 py-2 shadow-sm mt-8"
-        >
+        <nav aria-label="Breadcrumb" className="py-2 mt-8">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ol className="flex items-center space-x-2 text-gray-500 text-sm">
               {breadcrumbItems.map((item, index) => (

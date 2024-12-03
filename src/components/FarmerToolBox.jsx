@@ -410,10 +410,7 @@ const FarmerToolBox = ({ showBreadCrumb = true }) => {
     <div className="max-w-full mx-auto">
       {/* Breadcrumb Navigation */}
       {showBreadCrumb && (
-        <nav
-          aria-label="Breadcrumb"
-          className="bg-gray-100 py-2 shadow-sm mt-16"
-        >
+        <nav aria-label="Breadcrumb" className="py-0 mt-16">
           <div className="max-w-7xl mx-auto px-6">
             <ol className="flex items-center space-x-2 text-gray-500 text-sm">
               {breadcrumbItems.map((item, index) => (
