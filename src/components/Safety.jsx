@@ -73,72 +73,142 @@ const Safety = ({ showBreadCrumb = true }) => {
       {/* Hero Section */}
       <header className="bg-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-start">
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl text-red-900 font-bold mb-6">
-            Fertiliser Handling and Safety
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl text-red-800 font-bold mb-6">
+            Organic Fertilizer Handling and Sustainability
           </h1>
           <p className="text-base sm:text-lg lg:text-xl font-light leading-relaxed">
-            Ensuring safety for our employees, customers, and the environment.
+            At the heart of sustainable farming lies our commitment to safety,
+            purity, and environmental stewardship.
             <br />
-            Committed to industry-leading standards and sustainable practices.
+            Our organic fertilizers are crafted to promote healthy ecosystems
+            while ensuring safety for farmers, crops, and the planet.
           </p>
         </div>
       </header>
 
       {/* Main Content Section */}
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Employee Safety */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Farmer Safety */}
           <div className="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
             <div className="mb-4">
               <img
-                src="https://cdn-icons-png.flaticon.com/512/2920/2920587.png"
-                alt="Employee Safety Icon"
+                src="https://cdn-icons-png.flaticon.com/512/2645/2645477.png"
+                alt="Farmer Safety Icon"
                 className="h-16 w-16 mx-auto"
               />
             </div>
-            <h2 className="text-xl font-semibold text-red-900 mb-2">
-              Employee Safety
+            <h2 className="text-xl font-semibold text-red-800 mb-2">
+              Farmer Safety
             </h2>
             <p className="text-gray-600">
-              Comprehensive training, personal protective equipment, and a safe
-              work environment are our top priorities for employees.
+              We prioritize farmer well-being by providing comprehensive
+              training on handling organic fertilizers. With clear labeling and
+              safe application techniques, farmers can protect their health
+              while ensuring optimal crop performance.
+            </p>
+            <p className="text-gray-600 mt-4">
+              Our products are designed to be user-friendly, minimizing the risk
+              of exposure to harmful substances commonly found in chemical
+              alternatives.
             </p>
           </div>
 
-          {/* Customer Safety */}
+          {/* Product Integrity */}
           <div className="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
             <div className="mb-4">
               <img
-                src="https://cdn-icons-png.flaticon.com/512/3500/3500833.png"
-                alt="Customer Safety Icon"
+                src="https://cdn-icons-png.flaticon.com/512/1543/1543150.png"
+                alt="Product Integrity Icon"
                 className="h-16 w-16 mx-auto"
               />
             </div>
-            <h2 className="text-xl font-semibold text-red-900 mb-2">
-              Customer Safety
+            <h2 className="text-xl font-semibold text-red-800 mb-2">
+              Product Integrity
             </h2>
             <p className="text-gray-600">
-              We ensure our products meet the highest safety standards to
-              protect customers.
+              Each batch of our organic fertilizers is crafted with care,
+              ensuring a perfect balance of nutrients for healthy soil and
+              robust crops. By avoiding synthetic chemicals, our fertilizers
+              enhance biodiversity and promote natural soil regeneration.
             </p>
-          </div>
-
-          {/* Environmental Safety */}
-          <div className="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
-            <div className="mb-4">
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/2062/2062075.png"
-                alt="Environmental Safety Icon"
-                className="h-16 w-16 mx-auto"
-              />
-            </div>
-            <h2 className="text-xl font-semibold text-red-900 mb-2">
-              Environmental Safety
-            </h2>
-            <p className="text-gray-600">
-              We strive to minimize our impact on the environment through
+            <p className="text-gray-600 mt-4">
+              Our strict quality control ensures that farmers receive a product
+              they can trust, one that aligns with their commitment to
               sustainable practices.
             </p>
+          </div>
+
+          {/* Environmental Care */}
+          <div className="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
+            <div className="mb-4">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/2909/2909821.png"
+                alt="Environmental Care Icon"
+                className="h-16 w-16 mx-auto"
+              />
+            </div>
+            <h2 className="text-xl font-semibold text-red-800 mb-2">
+              Environmental Care
+            </h2>
+            <p className="text-gray-600">
+              Protecting the planet is central to our mission. Our organic
+              fertilizers are biodegradable and free from harmful runoff,
+              helping to safeguard water bodies and surrounding ecosystems.
+            </p>
+            <p className="text-gray-600 mt-4">
+              By supporting carbon sequestration and reducing soil erosion, we
+              contribute to mitigating climate change and creating resilient
+              agricultural systems.
+            </p>
+          </div>
+        </div>
+
+        {/* Additional Information Section */}
+        <div className="mt-12">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl text-red-800 font-bold mb-6">
+            Why Choose Organic Fertilizers?
+          </h2>
+          <p className="text-gray-700 text-lg leading-relaxed mb-6">
+            Organic fertilizers are not just an alternative; they are a
+            necessity for sustainable agriculture. By enriching the soil with
+            natural nutrients, they support long-term fertility, encourage
+            microbial activity, and ensure that farming practices work in
+            harmony with nature.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Benefit 1 */}
+            <div className="bg-gray-100 rounded-lg shadow-lg p-6">
+              <h3 className="text-lg font-semibold text-red-800 mb-2">
+                Enriches Soil Health
+              </h3>
+              <p className="text-gray-600">
+                Organic fertilizers restore the natural balance of nutrients in
+                the soil, fostering a thriving environment for beneficial
+                microorganisms.
+              </p>
+            </div>
+            {/* Benefit 2 */}
+            <div className="bg-gray-100 rounded-lg shadow-lg p-6">
+              <h3 className="text-lg font-semibold text-red-800 mb-2">
+                Reduces Environmental Impact
+              </h3>
+              <p className="text-gray-600">
+                Free from synthetic chemicals, organic fertilizers reduce
+                pollution and help combat the effects of climate change through
+                sustainable farming methods.
+              </p>
+            </div>
+            {/* Benefit 3 */}
+            <div className="bg-gray-100 rounded-lg shadow-lg p-6">
+              <h3 className="text-lg font-semibold text-red-800 mb-2">
+                Safe for All
+              </h3>
+              <p className="text-gray-600">
+                Organic fertilizers are safe for farmers, consumers, and the
+                environment, ensuring healthier ecosystems and food systems.
+              </p>
+            </div>
           </div>
         </div>
       </div>

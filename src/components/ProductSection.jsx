@@ -84,12 +84,14 @@ const ProductSection = ({ showBreadCrumb = true }) => {
 
         {/* Section Title */}
         <h1 className="text-[#B80000] text-2xl md:text-3xl font-bold mb-4">
-          How to choose the right fertiliser
+          Choosing the Right Organic Fertilizer
         </h1>
         <p className="text-gray-700 text-sm md:text-base mb-6">
-          Our fertilisers are grouped into product families to make it easier to
-          choose the right one. Or you can see all fertilisers together and use
-          filters to find a specific fertiliser.
+          Our organic fertilizers are thoughtfully categorized to simplify your
+          selection process. Each product is crafted to enrich soil naturally,
+          enhance crop health, and promote sustainable farming. Use our filters
+          to find the perfect organic solution tailored to your farm's unique
+          needs.
         </p>
 
         {/* Product Grid */}

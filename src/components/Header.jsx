@@ -16,8 +16,6 @@ const links = [
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const closeMenu = () => setIsMenuOpen(false);
-
   return (
     <nav className="top-0 left-0 w-full bg-white md:bg-transparent z-20 shadow-md md:shadow-none transition-all duration-300">
       <div className="max-w-8xl mx-auto flex items-center justify-between px-6 py-4">
@@ -45,17 +43,6 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            {/* <button
-              onClick={() =>
-                document
-                  .getElementById("search")
-                  .scrollIntoView({ behavior: "smooth" })
-              }
-              className="p-2 border rounded-full md:text-white text-black hover:bg-gray-200 md:hover:bg-white hover:text-blue-400 transition"
-              aria-label="Search"
-            >
-              🔍
-            </button> */}
             <a href="/" className="hover:underline text-xl md:text-lg">
               Search
             </a>
@@ -65,13 +52,13 @@ const Navbar = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="block md:hidden text-black"
+          className="block md:hidden text-red-900"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            strokeWidth="4"
+            strokeWidth="3"
             stroke="currentColor"
             className="w-8 h-8"
           >
@@ -89,7 +76,7 @@ const Navbar = () => {
         <>
           {/* Backdrop */}
           <div
-            className="fixed inset-0 bg-black bg-opacity-50 z-10"
+            className="fixed inset-0 bg-black bg-opacity-25 z-10"
             onClick={() => setIsMenuOpen(false)}
           ></div>
 
@@ -148,42 +135,42 @@ const HeroSection = () => {
         setBgImage(CropInfo);
         setHeroHeader("Crop information");
         setHeroText(
-          "Are you looking to increase the quality and yield of a particular crop or just need more general advice on any aspect of crop nutrition? Search through our crop information to find useful tips and advice on all aspects of crop nutrition."
+          "Discover eco-friendly practices to boost the quality and yield of your crops. Browse through organic crop insights and tips to support sustainable farming and environmental stewardship."
         );
         break;
       case "/fertilisers":
         setBgImage(Hero);
-        setHeroHeader("Fertilisers");
+        setHeroHeader("Organic fertilisers");
         setHeroText(
-          "EvansOkyereFarms fertilisers, solid or liquid, supply all crop nutrients including nitrogen, sulphur, phosphate, potassium, and a full range of micronutrients."
+          "Explore EvansOkyereFarms' organic fertilisers, crafted from natural ingredients to enrich your soil and promote healthy crop growth while protecting the environment."
         );
         break;
       case "/toolbox":
         setBgImage(FarmerToolbox);
-        setHeroHeader("Farmer's toolbox");
+        setHeroHeader("Eco-friendly farmer's toolbox");
         setHeroText(
-          "A collection of tools and services that allow fertilisers and nutrients to be used more efficiently to maximise crop yield and quality whilst avoiding over-fertilisation and protecting the environment."
+          "Access a variety of eco-friendly tools and services designed to optimise nutrient application, maximise yields, and minimise environmental impact."
         );
         break;
       case "/safety":
         setBgImage(Safety);
-        setHeroHeader("Fertiliser handling and safety");
+        setHeroHeader("Organic fertiliser handling and safety");
         setHeroText(
-          "Information about the safe use of fertilisers and best practice advice to people working with fertilisers in the supply chain and as end users."
+          "Learn best practices for safely handling organic fertilisers and ensure a sustainable and safe approach to boosting soil health and crop growth."
         );
         break;
       case "/about-us":
         setBgImage(Hero);
         setHeroHeader("Welcome to Evans Okyere Farms");
         setHeroText(
-          "Evans Okyere Farms makes organic fertilizer that serves as pesticides. He uses peels from oranges, mangoes, pineapples, etc. and neem leaves and animal droppings."
+          "At Evans Okyere Farms, we produce organic fertilisers using natural ingredients like fruit peels, neem leaves, and animal waste. Our mission is to support sustainable farming and protect our planet."
         );
         break;
       default:
         setBgImage(Hero);
         setHeroHeader("Crop nutrition solutions");
         setHeroText(
-          "Increase the quality and yield of your crops. EvansOkyereFarms agronomists are here to help with advice on all aspects of crop nutrition."
+          "Increase the quality and yield of your crops sustainably. EvansOkyereFarms offers expert advice and organic solutions to support eco-friendly farming practices."
         );
         break;
     }
@@ -197,7 +184,7 @@ const HeroSection = () => {
       }}
     >
       <Navbar />
-      <div className="relative z-10 text-white px-6 py-20 max-w-5xl mx-auto">
+      <div className="relative z-10 text-white px-6 py-10 max-w-5xl mx-auto">
         <div
           className="
     relative 
@@ -208,7 +195,7 @@ const HeroSection = () => {
     bg-opacity-80 
     px-6 
     py-4 
-    rounded-sm 
+    rounded-md 
     md:flex-row 
     md:justify-between 
     md:px-8 
@@ -226,14 +213,14 @@ const HeroSection = () => {
         >
           {/* Hero Header and Text */}
           <div className="md:max-w-3xl">
-            <h1 className="text-2xl font-bold m-1 md:text-4xl">{heroHeader}</h1>
+            <h1 className="text-2xl font-bold m-0 md:text-4xl">{heroHeader}</h1>
             <p className="text-sm mb-3 md:text-lg">{heroText}</p>
           </div>
 
           {/* Bottom-right Menu Icon */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="absolute bottom-4 right-4 md:hidden p-0"
+            className="absolute bottom-4 -right-0 md:hidden p-0"
             aria-label="Toggle Menu"
           >
             <svg
