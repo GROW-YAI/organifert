@@ -33,7 +33,7 @@ const Navbar = () => {
         </div>
 
         {/* Navigation Links */}
-        <ul className="hidden md:flex items-center space-x-6 text-black md:text-white font-extrabold">
+        <ul className="hidden md:flex items-center space-x-6 text-black md:text-white font-semibold px-32">
           <li>
             <a href="/" className="hover:underline text-xl md:text-lg">
               Crop Nutrition Solution
@@ -41,11 +41,11 @@ const Navbar = () => {
           </li>
           <li>
             <a href="/about-us" className="hover:underline text-xl md:text-lg">
-              About Us
+              About EvansOkyereFarms
             </a>
           </li>
           <li>
-            <button
+            {/* <button
               onClick={() =>
                 document
                   .getElementById("search")
@@ -55,7 +55,10 @@ const Navbar = () => {
               aria-label="Search"
             >
               🔍
-            </button>
+            </button> */}
+            <a href="/" className="hover:underline text-xl md:text-lg">
+              Search
+            </a>
           </li>
         </ul>
 
@@ -171,7 +174,7 @@ const HeroSection = () => {
         break;
       case "/about-us":
         setBgImage(Hero);
-        setHeroHeader("Welcome to EvansOkyereFarms");
+        setHeroHeader("Welcome to Evans Okyere Farms");
         setHeroText(
           "Evans Okyere Farms makes organic fertilizer that serves as pesticides. He uses peels from oranges, mangoes, pineapples, etc. and neem leaves and animal droppings."
         );

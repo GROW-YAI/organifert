@@ -11,30 +11,30 @@ import Calci from "../assets/evanscalci.png";
 const products = [
   {
     id: 1,
-    title: "EvansCola - Nitrate fertilisers",
+    title: "Organic Banana Fertilizer",
     description:
-      "EvansCola nitrogen and sulphur fertilisers contain ammonium nitrate or calcium ammonium nitrate for use on grassland and arable crops.",
+      "A natural fertilizer made from organic banana residues, rich in potassium and nitrogen. Ideal for improving soil structure and promoting healthy plant growth.",
     image: Cola,
   },
   {
     id: 2,
-    title: "EvansMila - Compound fertilisers",
+    title: "Moringa Leaf Compost",
     description:
-      "EvansMila fertilisers are uniform compound products for high efficiency and balanced nutrition.",
+      "An organic compost made from nutrient-dense Moringa leaves, offering balanced nutrition for sustainable farming. Enhances soil fertility and boosts crop resilience.",
     image: Mila,
   },
   {
     id: 3,
-    title: "EvansBela - Nitrate fertilisers",
+    title: "Citrus-Based Organic Fertilizer",
     description:
-      "EvansBela nitrogen and sulphur fertilisers contain ammonium nitrate or calcium ammonium nitrate for use on grassland and arable crops.",
+      "Derived from orange peels and citrus residues, this fertilizer enriches soil with natural nutrients and supports microbial activity for healthier yields.",
     image: Vita,
   },
   {
     id: 4,
-    title: "EvansArable - Compound fertilisers",
+    title: "Animal Manure Compost",
     description:
-      "EvansArable fertilisers are uniform compound products for high efficiency and balanced nutrition.",
+      "A traditional organic fertilizer made from composted animal droppings. Provides a slow release of essential nutrients, improving soil texture and fertility naturally.",
     image: Calci,
   },
 ];
