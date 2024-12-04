@@ -173,7 +173,7 @@ const HeroSection = () => {
         setBgImage(Hero);
         setHeroHeader("Welcome to EvansOkyereFarms");
         setHeroText(
-          "EvansOkyereFarms Ghana was established in 2024 to strengthen the quality and depth of input supply and related services along agricultural value chains to increase the productivity of Ghanaian farmers."
+          "Evans Okyere Farms makes organic fertilizer that serves as pesticides. He uses peels from oranges, mangoes, pineapples, etc. and neem leaves and animal droppings."
         );
         break;
       default:
