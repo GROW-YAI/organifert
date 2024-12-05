@@ -25,7 +25,7 @@ const Navbar = () => {
             <img
               src={Logo}
               alt="Evans Okyere Farms Logo"
-              className="h-14 w-auto sm:h-24 md:h-28 lg:h-36 rounded-sm"
+              className="h-14 w-auto sm:h-24 md:h-28 lg:h-32 rounded-sm"
             />
           </Link>
         </div>
@@ -154,7 +154,7 @@ const HeroSection = () => {
         break;
       case "/safety":
         setBgImage(Safety);
-        setHeroHeader("Organic fertiliser handling and safety");
+        setHeroHeader("Fertiliser handling and safety");
         setHeroText(
           "Learn best practices for safely handling organic fertilisers and ensure a sustainable and safe approach to boosting soil health and crop growth."
         );
@@ -167,7 +167,7 @@ const HeroSection = () => {
         );
         break;
       default:
-        setBgImage(Hero);
+        setBgImage(FarmerToolbox);
         setHeroHeader("Crop nutrition solutions");
         setHeroText(
           "Increase the quality and yield of your crops sustainably. EvansOkyereFarms offers expert advice and organic solutions to support eco-friendly farming practices."
@@ -184,7 +184,7 @@ const HeroSection = () => {
       }}
     >
       <Navbar />
-      <div className="relative z-10 text-white px-6 py-10 max-w-5xl mx-auto">
+      <div className="relative z-10 text-white px-6 py-10 md:py-48 max-w-5xl max-h-2 mx-auto">
         <div
           className="
     relative 
@@ -198,17 +198,18 @@ const HeroSection = () => {
     rounded-md 
     md:flex-row 
     md:justify-between 
-    md:px-8 
+    md:px-4 
     md:py-6 
     mx-auto 
     m-10 
-    md:mt-12 
+    md:m-10 
     w-full 
     max-w-lg 
-    md:max-w-2xl
+    md:max-w-xl
     transform 
     translate-y-4 
-    translate-x-2
+    -translate-x-62
+   
   "
         >
           {/* Hero Header and Text */}

@@ -125,7 +125,7 @@ const FarmerToolBox = ({ showBreadCrumb = true }) => {
       {/* Title and Description */}
       <div className="px-6 py-12 max-w-7xl mx-auto">
         <h2 className="text-2xl md:text-3xl text-red-800 font-bold mb-4">
-          Grow Organically, Sustainably, and Successfully
+          Grow Organically, Sustainably and Successfully
         </h2>
         <p className="text-sm md:text-base text-gray-600 mb-8">
           Embrace sustainable farming with tools designed to help you make the
