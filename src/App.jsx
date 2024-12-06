@@ -12,6 +12,7 @@ import Safety from "./components/Safety";
 import FarmerToolBox from "./components/FarmerToolBox";
 import CropDetails from "./pages/CropDetails";
 import AboutUs from "./components/AboutUs";
+import Error from "./pages/Error";
 
 const App = () => {
   return (
@@ -28,6 +29,8 @@ const App = () => {
         <Route path="/safety" element={<Safety />} />
         <Route path="/toolbox" element={<FarmerToolBox />} />
         <Route path="/crop/:id" element={<CropDetails />} />
+        <Route path="/crop/:id" element={<CropDetails />} />
+        <Route path="*" element={<Error />} />
       </Routes>
 
       <Footer />
