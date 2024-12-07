@@ -4,40 +4,8 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Cola from "../assets/evanscola.png";
 import Mila from "../assets/evansmila.png";
-import Vita from "../assets/evansvita.png";
-import Calci from "../assets/evanscalci.png";
-
+import { PRODUCTS } from "./constants";
 // Product data
-const products = [
-  {
-    id: 1,
-    title: "Organic Banana Fertilizer",
-    description:
-      "A natural fertilizer made from organic banana residues, rich in potassium and nitrogen. Ideal for improving soil structure and promoting healthy plant growth.",
-    image: Cola,
-  },
-  {
-    id: 2,
-    title: "Moringa Leaf Compost",
-    description:
-      "An organic compost made from nutrient-dense Moringa leaves, offering balanced nutrition for sustainable farming. Enhances soil fertility and boosts crop resilience.",
-    image: Mila,
-  },
-  {
-    id: 3,
-    title: "Citrus-Based Organic Fertilizer",
-    description:
-      "Derived from orange peels and citrus residues, this fertilizer enriches soil with natural nutrients and supports microbial activity for healthier yields.",
-    image: Vita,
-  },
-  {
-    id: 4,
-    title: "Animal Manure Compost",
-    description:
-      "A traditional organic fertilizer made from composted animal droppings. Provides a slow release of essential nutrients, improving soil texture and fertility naturally.",
-    image: Calci,
-  },
-];
 
 // Styled container for consistent design
 const Container = styled.div`
@@ -96,7 +64,7 @@ const ProductSection = ({ showBreadCrumb = true }) => {
 
         {/* Product Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6 pt-8">
-          {products.map((product) => (
+          {PRODUCTS.map((product) => (
             <Link
               key={product.id}
               to={`/product/${product.id}`} // Dynamic route to the product details page
@@ -105,14 +73,14 @@ const ProductSection = ({ showBreadCrumb = true }) => {
               {/* Product Image */}
               <img
                 src={product.image}
-                alt={product.title}
+                alt={product.name}
                 className="w-full sm:w-1/3 h-40 object-contain p-4"
               />
 
               {/* Product Content */}
               <div className="p-4 sm:p-6 w-full">
                 <h3 className="text-lg font-semibold text-[#B80000] mb-2">
-                  {product.title}
+                  {product.name}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
                   {product.description}
