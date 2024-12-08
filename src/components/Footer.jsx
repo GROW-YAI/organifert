@@ -11,7 +11,7 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 const Footer = () => {
   return (
     <footer className="bg-[#0B1C3E] text-white py-12">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
+      <div className="container max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
         {/* Contact Section */}
         <div>
           <h3 className="text-lg font-bold mb-4">Contact Evans Okyere Farms</h3>
@@ -114,7 +114,7 @@ const Footer = () => {
 
       {/* Footer Bottom Links */}
       <div className="mt-12 border-t border-gray-700">
-        <div className="container mx-auto py-6 flex flex-col md:flex-row justify-between items-center px-6">
+        <div className="container max-w-7xl mx-auto py-6 flex flex-col md:flex-row justify-between items-center px-6">
           <div className="flex space-x-4 text-sm text-gray-400">
             <a href="#" className="hover:text-white">
               Safety Data Sheets
