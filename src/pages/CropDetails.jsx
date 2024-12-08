@@ -1,4 +1,3 @@
-import React from "react";
 import { useParams } from "react-router-dom";
 import Cabbage from "../assets/cabbage.png";
 import Cocoa from "../assets/cocoa.png";

@@ -161,7 +161,7 @@ const HeroSection = () => {
         break;
       case "/about-us":
         setBgImage(Hero);
-        setHeroHeader("Welcome to Evans Okyere Farms");
+        setHeroHeader("Welcome to Evans Farms");
         setHeroText(
           "At Evans Okyere Farms, we produce organic fertilisers using natural ingredients like fruit peels, neem leaves, and animal waste. Our mission is to support sustainable farming and protect our planet."
         );
