@@ -1,4 +1,5 @@
 import {
+  FaTiktok,
   FaLinkedin,
   FaFacebook,
   FaInstagram,
@@ -77,7 +78,7 @@ const Footer = () => {
           </p>
           <div className="flex space-x-4 text-2xl">
             <a
-              href="https://www.linkedin.com/in/evans-okyere-farms"
+              href="https://www.tiktok.com/@evansokyerefarms"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white"
@@ -85,7 +86,16 @@ const Footer = () => {
               <FaLinkedin className="fa-lg" />
             </a>
             <a
-              href="https://www.facebook.com/evansokyerefarms"
+              href="https://www.tiktok.com/@evansokyerefarms"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-white"
+            >
+              <FaTiktok className="fa-lg" />
+            </a>
+
+            <a
+              href="https://www.facebook.com/profile.php?id=61570580871137"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white"
@@ -101,7 +111,7 @@ const Footer = () => {
               <FaSquareXTwitter className="fa-lg" />
             </a>
             <a
-              href="https://www.instagram.com/evansokyerefarms"
+              href="https://www.instagram.com/evansokyere_farms/profilecard/?igsh=bHpleXEyOTVodW9h"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white"
