@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 const AboutUs = () => {
   return (
     <section className="bg-white py-16">
+      <ScrollToTopButton />
       {/* Main container with max-w-7xl */}
       <div className="max-w-7xl mx-auto px-6">
         {/* Hero Section */}

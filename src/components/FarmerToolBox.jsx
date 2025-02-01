@@ -6,6 +6,7 @@ import ImageIt from "../assets/imageit.png";
 import SoilAnalysis from "../assets/soilanalysis.png";
 import LeafAnalysis from "../assets/leaf-analysis.png";
 import Megalab from "../assets/megalab.png";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 const FarmerToolBox = ({ showBreadCrumb = true }) => {
   const navigate = useNavigate();
@@ -157,6 +158,7 @@ const FarmerToolBox = ({ showBreadCrumb = true }) => {
           </div>
         ))}
       </div>
+      <ScrollToTopButton />
     </div>
   );
 };

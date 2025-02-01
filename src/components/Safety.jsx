@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 const Safety = ({ showBreadCrumb = true }) => {
   const location = useLocation();
@@ -27,6 +28,8 @@ const Safety = ({ showBreadCrumb = true }) => {
   return (
     <div>
       {/* Breadcrumb Navigation */}
+      <ScrollToTopButton />
+
       {showBreadCrumb && (
         <nav aria-label="Breadcrumb" className="py-2 mt-8">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import Cola from "../assets/evanscola.png";
 import Mila from "../assets/evansmila.png";
 import { PRODUCTS } from "./constants";
+import ScrollToTopButton from "../components/ScrollToTopButton";
+
 // Product data
 
 // Styled container for consistent design
@@ -88,6 +90,7 @@ const ProductSection = ({ showBreadCrumb = true }) => {
             </Link>
           ))}
         </div>
+        <ScrollToTopButton />
       </MainContent>
     </Container>
   );

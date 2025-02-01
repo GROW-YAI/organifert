@@ -140,7 +140,8 @@ const Footer = () => {
             </a>
           </div>
           <p className="text-sm text-gray-400 mt-4 md:mt-0">
-            © 2024 Evans Okyere Farms. All rights reserved.
+            &copy; {new Date().getFullYear()} Evans Okyere Farms. All rights
+            reserved.
           </p>
         </div>
       </div>

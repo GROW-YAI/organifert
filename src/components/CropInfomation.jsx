@@ -8,6 +8,7 @@ import Maize from "../assets/maize.png";
 import Onion from "../assets/onion.png";
 import Rice from "../assets/rice.png";
 import Tomato from "../assets/tomato.png";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 const crops = [
   { id: 1, name: "Cabbage", image: Cabbage },
@@ -147,6 +148,7 @@ const CropInformation = ({ showBreadCrumb = true }) => {
             </CropCard>
           ))}
         </CropGrid>
+        <ScrollToTopButton />
       </MainContent>
     </Container>
   );
