@@ -1,13 +1,11 @@
 import {
   FaTiktok,
-  FaLinkedin,
   FaFacebook,
   FaInstagram,
   FaPhoneAlt,
   FaEnvelope,
   FaMapMarkerAlt,
 } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -83,17 +81,8 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white"
             >
-              <FaLinkedin className="fa-lg" />
-            </a>
-            <a
-              href="https://www.tiktok.com/@evansokyerefarms"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white"
-            >
               <FaTiktok className="fa-lg" />
             </a>
-
             <a
               href="https://www.facebook.com/profile.php?id=61570580871137"
               target="_blank"
@@ -101,14 +90,6 @@ const Footer = () => {
               className="text-gray-400 hover:text-white"
             >
               <FaFacebook className="fa-lg" />
-            </a>
-            <a
-              href="https://twitter.com/evansokyerefarms"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white"
-            >
-              <FaSquareXTwitter className="fa-lg" />
             </a>
             <a
               href="https://www.instagram.com/evansokyere_farms/profilecard/?igsh=bHpleXEyOTVodW9h"
