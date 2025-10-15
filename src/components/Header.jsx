@@ -6,6 +6,7 @@ import Safety from "../assets/bg-safety.png";
 import FarmerToolbox from "../assets/farmertoolbox.png";
 import Logo from "../assets/logo/high-resolution-logo.png";
 
+// Hero navigation links
 const links = [
   { name: "Crop Information", path: "/crop-info" },
   { name: "Fertilisers", path: "/fertilisers" },
@@ -13,61 +14,97 @@ const links = [
   { name: "Fertiliser handling and safety", path: "/safety" },
 ];
 
+// Navbar Component
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  // Scroll effect: adds background + shadow on scroll
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 10);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="top-0 left-0 w-full bg-white md:bg-transparent z-20 shadow-md md:shadow-none transition-all duration-300">
-      <div className="max-w-8xl mx-auto flex items-center justify-between px-6 py-4">
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        scrolled ? "bg-white shadow-md" : "bg-white"
+      }`}
+    >
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
         {/* Logo */}
-        <div className="flex items-center justify-start">
-          <Link to="/" className="inline-block">
-            <img
-              src={Logo}
-              alt="Evans Okyere Farms Logo"
-              className="h-14 w-auto sm:h-24 md:h-28 lg:h-32 rounded-sm"
-            />
-          </Link>
-        </div>
+        <Link to="/" className="flex items-center">
+          <img
+            src={Logo}
+            alt="Evans Okyere Farms Logo"
+            className="h-14 w-auto sm:h-20 md:h-24"
+          />
+        </Link>
 
-        {/* Navigation Links */}
-        <ul className="hidden md:flex items-center space-x-6 text-black md:text-white font-semibold px-32">
+        {/* Desktop Links */}
+        <ul className="hidden md:flex items-center space-x-6 text-red-900 font-semibold">
           <li>
-            <a href="/" className="hover:underline text-xl md:text-lg">
+            <Link to="/" className="hover:underline text-lg">
               Crop Nutrition Solution
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/about-us" className="hover:underline text-xl md:text-lg">
+            <Link to="/about-us" className="hover:underline text-lg">
               About EvansOkyereFarms
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/" className="hover:underline text-xl md:text-lg">
-              Search
-            </a>
+            <button
+              onClick={() =>
+                document
+                  .getElementById("search")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+              className="text-lg hover:underline"
+            >
+              🔍 Search
+            </button>
           </li>
         </ul>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Menu Toggle */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="block md:hidden text-red-900"
+          className="block md:hidden text-red-900 focus:outline-none"
+          aria-label="Toggle menu"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="3"
-            stroke="currentColor"
-            className="w-8 h-8"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M4 6h16M4 12h16m-7 6h7"
-            />
-          </svg>
+          {isMenuOpen ? (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="3"
+              stroke="currentColor"
+              className="w-8 h-8"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          ) : (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="3"
+              stroke="currentColor"
+              className="w-8 h-8"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          )}
         </button>
       </div>
 
@@ -76,29 +113,29 @@ const Navbar = () => {
         <>
           {/* Backdrop */}
           <div
-            className="fixed inset-0 bg-black bg-opacity-25 z-10"
+            className="fixed inset-0 bg-black bg-opacity-25 z-40"
             onClick={() => setIsMenuOpen(false)}
           ></div>
 
-          {/* Menu */}
-          <ul className="absolute top-16 left-0 w-full bg-black bg-opacity-80 text-white z-20 shadow-lg px-10 py-10 space-y-4">
+          {/* Menu Items */}
+          <ul className="absolute top-[72px] left-0 w-full bg-white text-red-900 font-semibold shadow-lg z-50 px-10 py-6 space-y-4">
             <li>
-              <a
-                href="/"
+              <Link
+                to="/"
                 onClick={() => setIsMenuOpen(false)}
-                className="block text-start text-lg hover:bg-gray-100 py-2"
+                className="block text-lg hover:bg-gray-100 py-2"
               >
                 Crop Nutrition Solution
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/about-us"
+              <Link
+                to="/about-us"
                 onClick={() => setIsMenuOpen(false)}
-                className="block text-start text-lg hover:bg-gray-100 py-2"
+                className="block text-lg hover:bg-gray-100 py-2"
               >
                 About Us
-              </a>
+              </Link>
             </li>
             <li>
               <button
@@ -106,9 +143,9 @@ const Navbar = () => {
                   setIsMenuOpen(false);
                   document
                     .getElementById("search")
-                    .scrollIntoView({ behavior: "smooth" });
+                    ?.scrollIntoView({ behavior: "smooth" });
                 }}
-                className=" mx-auto text-left text-lg text-black hover:bg-gray-100 py-2"
+                className="w-full text-left text-lg hover:bg-gray-100 py-2"
               >
                 🔍 Search
               </button>
@@ -120,6 +157,7 @@ const Navbar = () => {
   );
 };
 
+// Hero Section Component
 const HeroSection = () => {
   const [bgImage, setBgImage] = useState(Hero);
   const [heroHeader, setHeroHeader] = useState("Crop nutrition solutions");
@@ -135,42 +173,42 @@ const HeroSection = () => {
         setBgImage(CropInfo);
         setHeroHeader("Crop information");
         setHeroText(
-          "Discover eco-friendly practices to boost the quality and yield of your crops. Browse through organic crop insights and tips to support sustainable farming and environmental stewardship."
+          "Discover eco-friendly practices to boost the quality and yield of your crops."
         );
         break;
       case "/fertilisers":
         setBgImage(Hero);
         setHeroHeader("Organic fertilisers");
         setHeroText(
-          "Explore EvansOkyereFarms' organic fertilisers, crafted from natural ingredients to enrich your soil and promote healthy crop growth while protecting the environment."
+          "Explore EvansOkyereFarms' organic fertilisers crafted from natural ingredients."
         );
         break;
       case "/toolbox":
         setBgImage(FarmerToolbox);
         setHeroHeader("Eco-friendly farmer's toolbox");
         setHeroText(
-          "Access a variety of eco-friendly tools and services designed to optimise nutrient application, maximise yields, and minimise environmental impact."
+          "Access tools and services to optimise nutrient application and maximise yields."
         );
         break;
       case "/safety":
         setBgImage(Safety);
         setHeroHeader("Fertiliser handling and safety");
         setHeroText(
-          "Learn best practices for safely handling organic fertilisers and ensure a sustainable and safe approach to boosting soil health and crop growth."
+          "Learn best practices for safely handling organic fertilisers."
         );
         break;
       case "/about-us":
         setBgImage(Hero);
         setHeroHeader("Welcome to Evans Farms");
         setHeroText(
-          "At Evans Okyere Farms, we produce organic fertilisers using natural ingredients like fruit peels, neem leaves, and animal waste. Our mission is to support sustainable farming and protect our planet."
+          "At Evans Okyere Farms, we produce organic fertilisers using natural ingredients to support sustainable farming."
         );
         break;
       default:
         setBgImage(FarmerToolbox);
         setHeroHeader("Crop nutrition solutions");
         setHeroText(
-          "Increase the quality and yield of your crops sustainably. EvansOkyereFarms offers expert advice and organic solutions to support eco-friendly farming practices."
+          "Increase crop quality sustainably. Get expert advice and organic solutions for eco-friendly farming."
         );
         break;
     }
@@ -184,44 +222,24 @@ const HeroSection = () => {
       }}
     >
       <Navbar />
-      <div className="relative z-10 text-white px-6 py-10 md:py-48 max-w-5xl max-h-2 mx-auto">
+
+      {/* Hero Content */}
+      <div className="relative z-10 text-white px-6 py-10 md:py-48 max-w-5xl mx-auto">
         <div
-          className="
-    relative 
-    flex flex-col 
-    items-start 
-    justify-center 
-    bg-red-500 
-    bg-opacity-80 
-    px-6 
-    py-4 
-    rounded-md 
-    md:flex-row 
-    md:justify-between 
-    md:px-4 
-    md:py-6 
-    mx-auto 
-    m-10 
-    md:m-10 
-    w-full 
-    max-w-lg 
-    md:max-w-xl
-    transform 
-    translate-y-4 
-    -translate-x-62
-   
-  "
+          className="relative flex flex-col items-start justify-center 
+          bg-red-500 bg-opacity-80 px-6 py-4 rounded-md 
+          md:flex-row md:justify-between md:px-6 md:py-6 mx-auto w-full 
+          max-w-lg md:max-w-2xl transform translate-y-4"
         >
-          {/* Hero Header and Text */}
           <div className="md:max-w-3xl">
-            <h1 className="text-2xl font-bold m-0 md:text-4xl">{heroHeader}</h1>
-            <p className="text-sm mb-3 md:text-lg">{heroText}</p>
+            <h1 className="text-2xl font-bold md:text-4xl">{heroHeader}</h1>
+            <p className="text-sm md:text-lg mt-2">{heroText}</p>
           </div>
 
-          {/* Bottom-right Menu Icon */}
+          {/* Mobile Menu Toggle in Hero */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="absolute bottom-4 -right-0 md:hidden p-0"
+            className="absolute bottom-4 right-4 md:hidden"
             aria-label="Toggle Menu"
           >
             <svg
@@ -230,7 +248,7 @@ const HeroSection = () => {
               viewBox="0 0 24 24"
               strokeWidth="4"
               stroke="currentColor"
-              className="w-7 h-8 text-white"
+              className="w-8 h-8 text-white"
             >
               <path
                 strokeLinecap="round"
@@ -240,16 +258,18 @@ const HeroSection = () => {
             </svg>
           </button>
         </div>
-        <div className="bg-white shadow-md mb-64 md:-scroll-mt-3.5 rounded-sm hidden md:block">
+
+        {/* Desktop Submenu */}
+        <div className="bg-white shadow-md rounded-sm hidden md:block mt-10">
           <div className="flex flex-wrap justify-center pb-1">
             {links.map((link, index) => (
               <Link
                 key={index}
-                className={`px-4 py-1 text-lg border-b-2 ${
+                className={`px-4 py-2 text-lg border-b-2 transition-colors duration-200 ${
                   pathname === link.path
                     ? "border-b-red-800 text-red-600"
-                    : "border-b-transparent text-red-900"
-                } hover:bg-gray-100 md:px-6 md:py-3`}
+                    : "border-b-transparent text-red-900 hover:text-red-600"
+                }`}
                 to={link.path}
               >
                 {link.name}
@@ -259,22 +279,20 @@ const HeroSection = () => {
         </div>
       </div>
 
+      {/* Mobile Dropdown Menu */}
       {menuOpen && (
         <>
-          {/* Backdrop */}
           <div
-            className="fixed inset-0 bg-black bg-opacity-25 z-10" // Fullscreen backdrop
-            onClick={() => setMenuOpen(false)} // Close menu on backdrop click
+            className="fixed inset-0 bg-black bg-opacity-25 z-10"
+            onClick={() => setMenuOpen(false)}
           ></div>
-
-          {/* Mobile Tabs Menu */}
-          <div className="fixed top-12 left-0 w-full bg-black bg-opacity-80 p-4 rounded-sm shadow-md z-20">
+          <div className="fixed top-12 left-0 w-full bg-black bg-opacity-80 p-4 shadow-md z-20">
             {links.map((link, index) => (
               <Link
                 key={index}
                 to={link.path}
-                className="block text-lg px-6 py-2 text-white hover:bg-gray-100 rounded-md"
-                onClick={() => setMenuOpen(false)} // Close menu on navigation
+                className="block text-lg px-6 py-2 text-white hover:bg-gray-100 hover:text-black rounded-md"
+                onClick={() => setMenuOpen(false)}
               >
                 {link.name}
               </Link>
